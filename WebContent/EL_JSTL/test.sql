@@ -5,3 +5,5 @@ create table test_table(
 );
 
 select * from test_table;
+
+

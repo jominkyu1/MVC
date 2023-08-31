@@ -16,7 +16,6 @@ public class ServiceWriterController extends HttpServlet{
 	 * */
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
 		RequestDispatcher fw = req.getRequestDispatcher("./views/sw.jsp");
 		fw.forward(req, resp);
 		// RequestDispatcher 서블릿 forward는 기존 URL패턴을 유지한상태로 view만 반환
