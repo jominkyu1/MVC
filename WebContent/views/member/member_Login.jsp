@@ -17,7 +17,8 @@
      }
      
      if($.trim($('#login_pwd').val()) == ''){
-        alert('로그인 비번을 입력하세요!');
+        //alert('로그인 비번을 입력하세요!');
+        $('.pwd_error').html("<strong style='color:red; font-size=36px;'> 비밀번호를 입력하세요 </strong>");
         $('#login_pwd').val('').focus();
         return false;
      }
@@ -52,6 +53,8 @@
       </th>
      </tr>
     </table>
+    <br><br><br>
+    <label class="pwd_error"></label>
    </form>
  </c:if>
  
@@ -68,8 +71,11 @@
       </tr>
       
       <tr>
-       <th><span style="font-size:28px;">${id}님</span> 로그인을 환영합니다.</th>
+       <th><span style="font-size:28px;">${id}님 로그인됨</th>
       </tr>          
+      <tr>
+      	<td>${name}님 환영합니다.</td>
+      </tr>
      </table>
     
    </form>
